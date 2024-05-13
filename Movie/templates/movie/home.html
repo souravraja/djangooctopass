@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'movie/css/moviehome.css' %}">
+    <link rel="stylesheet" href="{% static 'movie/css/responsivness.css' %}">
+    <link rel="stylesheet" href="{% static 'movie/css/playmovie.css' %}">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="{% static 'movie/js/homemovie.js' %}" defer></script>
+    <script src="{% static 'movie/js/playmovie.js' %}" defer></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- nav -->
+        <div class="nav container">
+            <!-- logo -->
+            <a href="index.html" class="logo">
+                Octopass<span>Movie</span>
+            </a>
+            <!-- search Box -->
+            <!-- <div class="search-box">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <input type="search" name="movie-search" id="search-input" placeholder="Search moie">
+                    <button type="submit"><i class="bx bx-search"></i></button> -->
+                    <!-- <i class="bx bx-search"></i> -->
+                <!-- </form> -->
+            <!-- </div> -->
+            <!-- User -->
+            <!-- <a href="#" class="user">
+                <img src="{% static 'movie/images/user.jpg' %}" alt="" class="user-img">
+            </a> -->
+
+            <!-- navbar -->
+            <div class="navbar">
+                <a href="{% url 'movie' %}" class="nav-link nav-active">
+                    <i class="bx bx-home"></i>
+                    <span class="nav-link-title">Home</span>
+                </a>
+                <a href="{% url 'trending' %}" class="nav-link">
+                    <i class="bx bxs-hot"></i>
+                    <span class="nav-link-title">Trending</span>
+                </a>
+                <a href="{% url 'explore' %}" class="nav-link">
+                    <i class="bx bx-compass"></i>
+                    <span class="nav-link-title">Explore</span>
+                </a>
+                <a href="{% url 'movies' %}" class="nav-link">
+                    <i class="bx bx-tv"></i>
+                    <span class="nav-link-title">Movies</span>
+                </a>
+                <a href="{% url 'favourite' %}" class="nav-link">
+                    <i class="bx bx-heart"></i>
+                    <span class="nav-link-title">Favourite</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    {% block body %}
+    <section class="home container" id="home">
+        <!-- home image  -->
+        {% for poster in poster %}
+        <img src="{{poster.movie_title_image.url}}" alt="" class="home-img" width="23px">
+        <div class="home-text">
+            <h1 class="home-title">{{poster.movie_name}}</p>
+            <a href="{% url 'playmovie' poster.id %}" class="watch-btn">
+                <i class="bx bx-right-arrow"></i>
+                <span>watch The trailer</span>
+            </a>
+        </div>
+        {% endfor %}
+    </section>
+    
+    <section class="popular container" id="popular">
+        <div class="heading">
+            <a href="#">
+                <h2 class="heading-title">Popular Movie</h2>
+            </a>
+        </div>
+        <!-- content  -->
+
+        <div class="popular-conten swiper">
+            <div class="swiper-wrapper">
+                {% for popolar in popolarmovie %}
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="{{popolar.movie_title_image.url}}" alt="" class="movie-box-img">
+                        <div class="box-text">
+                            <div class="movie-title">{{popolar.movie_name}}</div>
+                            <span class="movie-type">{{popolar.movie_type}}</span>
+                            <a href="{% url 'playmovie' popolar.id %}" class="watch-btn play-btn">
+                                <i class="bx bx-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+    <section class="popular container" id="popular">
+        <div class="heading">
+            <a href="#">
+                <h2 class="heading-title">New Movie</h2>
+            </a>
+        </div>
+        <!-- content  -->
+
+        <div class="popular-conten swiper">
+            <div class="swiper-wrapper">
+                {% for newmovie  in newmovie%}
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="{{newmovie.movie_title_image.url}}" alt="" class="movie-box-img">
+                        <div class="box-text">
+                            <div class="movie-title">{{newmovie.movie_name}}</div>
+                            <span class="movie-type">{{newmovie.movie_type}}</span>
+                            <a href="{% url 'playmovie' newmovie.id %}" class="watch-btn play-btn">
+                                <i class="bx bx-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+    <section class="popular container" id="popular">
+        <div class="heading">
+            <a href="#">
+                <h2 class="heading-title">hollywood Movie</h2>
+            </a>
+        </div>
+        <!-- content  -->
+
+        <div class="popular-conten swiper">
+            <div class="swiper-wrapper">
+                {% for hollywoodmovie in hollywoodmovie %}
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="{{hollywoodmovie.movie_title_image.url}}" alt="" class="movie-box-img">
+                        <div class="box-text">
+                            <div class="movie-title">{{hollywoodmovie.movie_name}}</div>
+                            <span class="movie-type">{{hollywoodmovie.movie_type}}</span>
+                            <a href="{% url 'playmovie' hollywoodmovie.id %}" class="watch-btn play-btn">
+                                <i class="bx bx-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+    </section>
+    <section class="popular container" id="popular">
+        <div class="heading">
+            <a href="#">
+                <h2 class="heading-title">hindi Movie</h2>
+            </a>
+        </div>
+        <!-- content  -->
+
+        <div class="popular-conten swiper">
+            <div class="swiper-wrapper">
+                {% for hindimovie in hindimovie %}
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="{{hindimovie.movie_title_image.url}}" alt="" class="movie-box-img">
+                        <div class="box-text">
+                            <div class="movie-title">{{hindimovie.movie_name}}</div>
+                            <span class="movie-type">{{hindimovie.movie_type}}</span>
+                            <a href="{% url 'playmovie' hindimovie.id %}" class="watch-btn play-btn">
+                                <i class="bx bx-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+    <section class="popular container" id="popular">
+        <div class="heading">
+            <a href="#">
+                <h2 class="heading-title">Bangoli Movie</h2>
+            </a>
+        </div>
+        <!-- content  -->
+
+        <div class="popular-conten swiper">
+            <div class="swiper-wrapper">
+
+                {% for bngoli in benglomovie %}
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="{{bngoli.movie_title_image.url}}" alt="" class="movie-box-img">
+                        <div class="box-text">
+                            <div class="movie-title">{{bngoli.movie_name}}</div>
+                            <span class="movie-type">{{bngoli.movie_type}}</span>
+                            <a href="{% url 'playmovie' bngoli.id %}" class="watch-btn play-btn">
+                                <i class="bx bx-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %}
+
+            </div>
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+    <section class="popular container" id="popular">
+        <div class="heading">
+            <a href="#">
+                <h2 class="heading-title">Hindi Dub Movie</h2>
+            </a>
+        </div>
+        <!-- content  -->
+
+        <div class="popular-conten swiper">
+            <div class="swiper-wrapper">
+                {% for hindidub in hindidubmovie %}
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="{{hindidub.movie_title_image.url}}" alt="" class="movie-box-img">
+                        <div class="box-text">
+                            <div class="movie-title">{{hindidub.movie_name}}</div>
+                            <span class="movie-type">{{hindidub.movie_type}}</span>
+                            <a href="{% url 'playmovie' hindidub.id %}" class="watch-btn play-btn">
+                                <i class="bx bx-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %}
+
+            </div>
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+    {% endblock %}
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+{% extends 'movie/home.html' %}
+{% block body %}
+<section class="movies container" id="movies">
+    <div class="heading">
+        <h2 class="heading-title"> New Movies And shows</h2>
+    </div>
+    <!-- Movie content  -->
+    <div class="movies-content">
+        {% for allmovie in explore %}
+
+        <div class="movie-box">
+            <img src="{{allmovie.movie_title_image.url}}" alt="" class="movie-box-img">
+            <div class="box-text">
+                <div class="movie-title">{{allmovie.movie_name}}</div>
+                <span class="movie-type">{{allmovie.movie_type}}</span>
+                <a href="{% url 'playmovie' allmovie.id %}" class="watch-btn play-btn">
+                    <i class="bx bx-right-arrow"></i>
+                </a>
+            </div>
+        </div>
+
+     {% endfor %}
+
+    </div>
+</section>
+
+{% endblock %}

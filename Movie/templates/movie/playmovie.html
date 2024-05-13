@@ -1,0 +1,38 @@
+{% extends 'movie/home.html' %}
+{% block body %}
+    <div class="play-container container">
+        <img src="{{playmovie.movie_title_image.url}}" alt="" class="play-img">
+        <div class="play-text">
+            <h2>{{playmovie.movie_name}}</h2>
+            <div class="rating">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star-half"></i>
+            </div>
+            <!-- tags -->
+            <div class="tags">
+                <span>Action</span>
+                <span>Adbenture</span>
+                <span>4k</span>
+            </div>
+            <!-- Trailer Button  -->
+            <a href="#" class="watch-btn">
+                <i class="bx bx-right-arrow"></i>
+                <span>Watch the trailer</span>
+            </a>
+        </div>
+        <!-- play Btn  -->
+        <a href="{{playmovie.movie_file}}">
+            <i class="bx bx-right-arrow play-movie"></i>
+        </a>
+    
+    </div>
+
+    <!-- About  -->
+    <div class="about-movie container">
+        <h2>{{playmovie.movie_name}}</h2>
+        
+
+{% endblock %}

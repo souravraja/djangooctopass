@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'social/css/post_create_form.css' %}">
+    <script src="{% static 'social/javascript/post_create_form.js' %}" defer></script>
+    <link rel="stylesheet" href="{% static 'social/css/homestyle.css' %}">
+
+
+</head>
+
+<body>
+    <!-- <h1>post_create_form</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="description">
+            description
+        </label>
+        <input type="text" name="description">
+        <label for="img">
+            <img src="" alt="">
+        </label>
+
+    </form> -->
+    <div class="hero">
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="input-file" id="drop-area">
+                <input type="file" id="input-file" name="image_upload" hidden>
+                <div id="img-view">
+                    <img src="{% static 'social/images/upload-icon.png' %}" alt="" srcset="">
+                    <p>Drag and drop or click hear to upload image</p>
+                    <span>Upload any images from desktop</span>
+                </div>
+                <textarea name="caption" id="" cols="60" rows="10"></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">POST</button>
+        </form>
+    </div>
+</body>
+
+</html>

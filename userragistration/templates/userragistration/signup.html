@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>signup</h1>
+    <div>
+        <style>
+            h5{
+                color: red;
+            }
+        </style>
+        {% for message in messages %}
+        <h5>{{message}}</h5>
+        {% endfor %}
+    </div>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="name">name</label>
+        <input type="text" name="username">
+
+        <label for="email">email</label>
+        <input type="email" name="email">
+
+        <label for="pswd">password</label>
+        <input type="password" name="pswd">
+
+        <label for="pswd2">re-password</label>
+        <input type="password" name="pswd2">
+
+        <button type="submit">submit</button>
+    </form>
+    <a href="{% url 'signin' %}">login</a>
+</body>
+</html>

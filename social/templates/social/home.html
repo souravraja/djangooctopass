@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="{% static 'social/css/home.css' %}" />
+    <link rel="stylesheet" href="{% static 'social/css/homestyle.css' %}">
+
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <h2 class="log">
+                nokosocial
+            </h2>
+            <div class="search-bar">
+                <i class="uil uil-search"></i>
+                <input type="search" name="" id="" placeholder="Search for creator,inspiration,and projects">
+            </div>
+            <div class="create">
+                <label class="btn btn-primary" for="#">create</label>
+                <div class="profile-photo">
+                    <img src="{% static 'social/images/profile-1.jpg'%}" alt="">
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- ---------------------------------  MAIN  ------------------------------- -->
+    <main>
+        <div class="container">
+            <!-- ===================  LEFT  =============================== -->
+            <div class="left">
+                <a href="" class="profile">
+                    <div class="profile-photo">
+                        <img src="{% static 'social/images/profile-1.jpg'%}" alt="">
+                    </div>
+                    <div class="handle">
+                        <h4>Diana Ayi</h4>
+                        <p class="text-muted">
+                            @dayi
+                        </p>
+                    </div>
+                </a>
+                <!-- -=-=-=========  SIDEBAR   ============== -->
+                <div class="sidebar">
+                    <a href="" class="menu-item active">
+                        <span><i class="uil uil-home"></i></span>
+                        <h3>home</h3>
+                    </a>
+                    <a href="" class="menu-item ">
+                        <span><i class="uil uil-compass"></i></span>
+                        <h3>Explore</h3>
+                    </a>
+                    <a href="" class="menu-item " id="notifications">
+                        <span>
+                            <i class="uil uil-bell"></i>
+                            <small class="notification-count">5+</small>
+                        </span>
+                        <h3>Notifications</h3>
+                        <!-- NOTIFICATION POPUP -->
+                        <div class="notification-popup">
+                            <div>
+                                <div class="profile-photo">
+                                    <img src="{% static 'social/images/profile-2.jpg'%}" alt="">
+                                </div>
+                                <div class="notification-body">
+                                    <b>keke benjamin</b>accepted your friend request
+                                    <small class="text-muted">2 days ago</small>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="profile-photo">
+                                    <img src="{% static 'social/images/profile-2.jpg'%}" alt="">
+                                </div>
+                                <div class="notification-body">
+                                    <b>keke benjamin</b>accepted your friend request
+                                    <small class="text-muted">2 days ago</small>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="profile-photo">
+                                    <img src="{% static 'social/images/profile-2.jpg'%}" alt="">
+                                </div>
+                                <div class="notification-body">
+                                    <b>keke benjamin</b>accepted your friend request
+                                    <small class="text-muted">2 days ago</small>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="profile-photo">
+                                    <img src="{% static 'social/images/profile-2.jpg'%}" alt="">
+                                </div>
+                                <div class="notification-body">
+                                    <b>keke benjamin</b>accepted your friend request
+                                    <small class="text-muted">2 days ago</small>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="profile-photo">
+                                    <img src="{% static 'social/images/profile-2.jpg'%}" alt="">
+                                </div>
+                                <div class="notification-body">
+                                    <b>keke benjamin</b>accepted your friend request
+                                    <small class="text-muted">2 days ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="menu-item " id="messages-notifications">
+                        <span><i class="uil uil-envelope-alt"></i>
+                            <small class="notification-count">6+</small>
+                        </span>
+                        <h3>messagse</h3>
+                    </a>
+                    <a href="" class="menu-item ">
+                        <span><i class="uil uil-bookmark"></i></span>
+                        <h3>Bookmarks</h3>
+                    </a>
+                    <a href="" class="menu-item ">
+                        <span><i class="uil uil-chart-line"></i></span>
+                        <h3>Analytics</h3>
+                    </a>
+                    <a href="" class="menu-item ">
+                        <span><i class="uil uil-palette"></i></span>
+                        <h3>Theme</h3>
+                    </a>
+                    <a href="" class="menu-item">
+                        <span><i class="uil uil-setting"></i></span>
+                        <h3>Settings</h3>
+                    </a>
+
+                </div>
+                <!-- ------------   END OF SIDEBAR  ------------------------- -->
+                <a href="{% url 'post_create_page' %}">
+                    <label for="create-post" class="btn btn-primary">create-post</label>
+                </a>
+            </div>
+
+            <!-- ===========  end of sidebar   ============== -->
+
+
+
+            <!-- ===================  MIDDLE  =============================== -->
+            <div class="middle">
+                <!-- =================   STORIES    ===================== -->
+                <div class="stories">
+                    <div class="story">
+                        <div class="profile-photo">
+                            <img src="{% static 'social/images/profile-8.jpg'%}" alt="">
+                        </div>
+                        <p class="story-name">your story</p>
+                    </div>
+                    <div class="story">
+                        <div class="profile-photo">
+                            <img src="{% static 'social/images/profile-8.jpg'%}" alt="">
+                        </div>
+                        <p class="story-name">your story</p>
+                    </div>
+                    <div class="story">
+                        <div class="profile-photo">
+                            <img src="{% static 'social/images/profile-9.jpg'%}" alt="">
+                        </div>
+                        <p class="story-name">your story</p>
+                    </div>
+                    <div class="story">
+                        <div class="profile-photo">
+                            <img src="{% static 'social/images/profile-10.jpg'%}" alt="">
+                        </div>
+                        <p class="story-name">your story</p>
+                    </div>
+                    <div class="story">
+                        <div class="profile-photo">
+                            <img src="{% static 'social/images/profile-11.jpg'%}" alt="">
+                        </div>
+                        <p class="story-name">your story</p>
+                    </div>
+                    <div class="story">
+                        <div class="profile-photo">
+                            <img src="{% static 'social/images/profile-8.jpg'%}" alt="">
+                        </div>
+                        <p class="story-name">your story</p>
+                    </div>
+
+
+                </div>
+                <!-- =======================   end of stories           ======================================== -->
+                <a href="{% url 'post_create_page' %}">
+                <form action="" method="post" class="create-post vkdsjhuijkdfs">
+                   
+                    {% csrf_token %}
+                    <div class="profile-photo">
+                        <img src="{% static 'social/images/profile-1.jpg'%}" alt="">
+                    </div>
+                    <input type="text" placeholder="What's on your mind Diana?" id="create-post">
+                    <input type="submit" value="Post" class="btn btn-primary">
+                    
+                </form>
+            </a>
+
+                <!-- =================         FEEDS            =================================== -->
+                <div class="feeds">
+
+                    <!-- ===============      FEED       =========================== -->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="{% static 'social/images/profile-1.jpg'%}" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>Lana Rose</h3>
+                                    <small>Dubai,15 MINUTES AGO</small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+                            </span>
+                        </div>
+                        <div class="photo">
+                            <img src="{% static 'social/images/feed-1.jpg'%}" alt="">
+                        </div>
+                        <div class="action-button">
+                            <div class="interaction-buttons">
+                                <span><i class="uil uil-heart"></i></span>
+                                <span><i class="uil uil-comment-dots"></i></span>
+                                <span><i class="uil uil-share-alt"></i></span>
+                            </div>
+                            <div class="bookmark">
+                                <span><i class="uil uil-bookmark-full"></i></span>
+                            </div>
+                        </div>
+                        <div class="liked-by">
+                            <span><img src="{% static 'social/images/profile-1.jpg'%}" alt=""></span>
+                            <span><img src="{% static 'social/images/profile-11.jpg'%}" alt=""></span>
+                            <span><img src="{% static 'social/images/profile-12.jpg'%}" alt=""></span>
+                            <span><img src="{% static 'social/images/profile-13.jpg'%}" alt=""></span>
+                            <p>Liked by <b>Eranest Achiever </b>and <b>2133 others</b></p>
+                        </div>
+                        <div class="caption">
+                            <p><b>Lana Rose</b> Lorem ipsum dolor sit quisquam eius</p>
+                            <span class="harsh-tag">#lifestyle</span>
+                        </div>
+                        <div class="comments text-muted">View all 277 comments</div>
+                    </div>
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="{% static 'social/images/profile-1.jpg'%}" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>Lana Rose</h3>
+                                    <small>Dubai,15 MINUTES AGO</small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+                            </span>
+                        </div>
+                        <div class="photo">
+                            <img src="{% static 'social/images/feed-2.jpg'%}" alt="">
+                        </div>
+                        <div class="action-button">
+                            <div class="interaction-buttons">
+                                <span><i class="uil uil-heart"></i></span>
+                                <span><i class="uil uil-comment-dots"></i></span>
+                                <span><i class="uil uil-share-alt"></i></span>
+                            </div>
+                            <div class="bookmark">
+                                <span><i class="uil uil-bookmark-full"></i></span>
+                            </div>
+                        </div>
+                        <div class="liked-by">
+                            <span><img src="{% static 'social/images/profile-1.jpg'%}" alt=""></span>
+                            <span><img src="{% static 'social/images/profile-11.jpg'%}" alt=""></span>
+                            <span><img src="{% static 'social/images/profile-12.jpg'%}" alt=""></span>
+                            <span><img src="{% static 'social/images/profile-13.jpg'%}" alt=""></span>
+                            <p>Liked by <b>Eranest Achiever </b>and <b>2133 others</b></p>
+                        </div>
+                        <div class="caption">
+                            <p><b>Lana Rose</b> Lorem ipsum dolor sit quisquam eius</p>
+                            <span class="harsh-tag">#lifestyle</span>
+                        </div>
+                        <div class="comments text-muted">View all 277 comments</div>
+                    </div>
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="{% static 'social/images/profile-1.jpg'%}" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>Lana Rose</h3>
+                                    <small>Dubai,15 MINUTES AGO</small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+                            </span>
+                        </div>
+                        <div class="photo">
+                            <img src="{% static 'social/images/feed-1.jpg'%}" alt="">
+                        </div>
+                        <div class="action-button">
+                            <div class="interaction-buttons">
+                                <span><i class="uil uil-heart"></i></span>
+                                <span><i class="uil uil-comment-dots"></i></span>
+                                <span><i class="uil uil-share-alt"></i></span>
+                            </div>
+                            <div class="bookmark">
+                                <span><i class="uil uil-bookmark-full"></i></span>
+                            </div>
+                        </div>
+                        <div class="liked-by">
+                            <span><img src="{% static 'social/images/profile-1.jpg'%}" alt=""></span>
+                            <span><img src="{% static 'social/images/profile-11.jpg'%}" alt=""></span>
+                            <span><img src="{% static 'social/images/profile-12.jpg'%}" alt=""></span>
+                            <span><img src="{% static 'social/images/profile-13.jpg'%}" alt=""></span>
+                            <p>Liked by <b>Eranest Achiever </b>and <b>2133 others</b></p>
+                        </div>
+                        <div class="caption">
+                            <p><b>Lana Rose</b> Lorem ipsum dolor sit quisquam eius</p>
+                            <span class="harsh-tag">#lifestyle</span>
+                        </div>
+                        <div class="comments text-muted">View all 277 comments</div>
+                    </div>
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="{% static 'social/images/profile-1.jpg'%}" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>Lana Rose</h3>
+                                    <small>Dubai,15 MINUTES AGO</small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+                            </span>
+                        </div>
+                        <div class="photo">
+                            <img src="{% static 'social/images/feed-4.jpg'%}" alt="">
+                        </div>
+                        <div class="action-button">
+                            <div class="interaction-buttons">
+                                <span><i class="uil uil-heart"></i></span>
+                                <span><i class="uil uil-comment-dots"></i></span>
+                                <span><i class="uil uil-share-alt"></i></span>
+                            </div>
+                            <div class="bookmark">
+                                <span><i class="uil uil-bookmark-full"></i></span>
+                            </div>
+                        </div>
+                        <div class="liked-by">
+                            <span><img src="{% static 'social/images/profile-1.jpg'%}" alt=""></span>
+                            <span><img src="{% static 'social/images/profile-11.jpg'%}" alt=""></span>
+                            <span><img src="{% static 'social/images/profile-12.jpg'%}" alt=""></span>
+                            <span><img src="{% static 'social/images/profile-13.jpg'%}" alt=""></span>
+                            <p>Liked by <b>Eranest Achiever </b>and <b>2133 others</b></p>
+                        </div>
+                        <div class="caption">
+                            <p><b>Lana Rose</b> Lorem ipsum dolor sit quisquam eius</p>
+                            <span class="harsh-tag">#lifestyle</span>
+                        </div>
+                        <div class="comments text-muted">View all 277 comments</div>
+                    </div>
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="{% static 'social/images/profile-1.jpg'%}" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>Lana Rose</h3>
+                                    <small>Dubai,15 MINUTES AGO</small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+                            </span>
+                        </div>
+                        <div class="photo">
+                            <img src="{% static 'social/images/feed-1.jpg'%}" alt="">
+                        </div>
+                        <div class="action-button">
+                            <div class="interaction-buttons">
+                                <span><i class="uil uil-heart"></i></span>
+                                <span><i class="uil uil-comment-dots"></i></span>
+                                <span><i class="uil uil-share-alt"></i></span>
+                            </div>
+                            <div class="bookmark">
+                                <span><i class="uil uil-bookmark-full"></i></span>
+                            </div>
+                        </div>
+                        <div class="liked-by">
+                            <span><img src="{% static 'social/images/profile-1.jpg'%}" alt=""></span>
+                            <span><img src="{% static 'social/images/profile-11.jpg'%}" alt=""></span>
+                            <span><img src="{% static 'social/images/profile-12.jpg'%}" alt=""></span>
+                            <span><img src="{% static 'social/images/profile-13.jpg'%}" alt=""></span>
+                            <p>Liked by <b>Eranest Achiever </b>and <b>2133 others</b></p>
+                        </div>
+                        <div class="caption">
+                            <p><b>Lana Rose</b> Lorem ipsum dolor sit quisquam eius</p>
+                            <span class="harsh-tag">#lifestyle</span>
+                        </div>
+                        <div class="comments text-muted">View all 277 comments</div>
+                    </div>
+                    <!-- ----   END FEED    ----------------- -->
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- ===================  RIGHT  =============================== -->
+            <div class="right">
+                <div class="messages">
+                    <div class="heading">
+                        <h4>messages</h4><i class="uil uil-edit"></i>
+                    </div>
+                    <!-- -------- SRATCH BAR------------ -->
+                    <div class="search-bar">
+                        <i class="uil uil-search"></i>
+                        <input type="search" name="" id="message-search" placeholder="srarch messages">
+                    </div>
+                    <!-- -------- MESSAGES CATEGORY------------ -->
+                    <div class="category">
+                        <h6 class="active">Primary</h6>
+                        <h6>Genetal</h6>
+                        <h6 class="message-requests">Requests(7)</h6>
+                    </div>
+                    <!-- -------- MESSAGE------------ -->
+                    <div class="message">
+                        <div class="profile-photo">
+                            <img src="{% static 'social/images/profile-18.jpg'%}" alt="">
+                            <div class="active"></div>
+                        </div>
+                        <div class="message-body">
+                            <h5>Eem Quist</h5>
+                            <p class="text-bold">Just woke up bruh</p>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="profile-photo">
+                            <img src="{% static 'social/images/profile-12.jpg'%}" alt="">
+                            <div class="active"></div>
+                        </div>
+                        <div class="message-body">
+                            <h5>Eem Quist</h5>
+                            <p class="text-bold">Just woke up bruh</p>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="profile-photo">
+                            <img src="{% static 'social/images/profile-13.jpg'%}" alt="">
+                            <div class="active"></div>
+                        </div>
+                        <div class="message-body">
+                            <h5>Eem Quist</h5>
+                            <p class="text-bold">Just woke up bruh</p>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="profile-photo">
+                            <img src="{% static 'social/images/profile-14.jpg'%}" alt="">
+
+                        </div>
+                        <div class="message-body">
+                            <h5>Eem Quist</h5>
+                            <p class="text-bold">Just woke up bruh</p>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="profile-photo">
+                            <img src="{% static 'social/images/profile-19.jpg'%}" alt="">
+
+                        </div>
+                        <div class="message-body">
+                            <h5>Eem Quist</h5>
+                            <p class="text-bold">Just woke up bruh</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- --------------   END OF MESSAGE    ------------------ -->
+                <!------------------  FRIEND REQUESTS   -------------------------------  -->
+                <div class="friend-requests">
+                    <h4>Requests</h4>
+                    <div class="request">
+                        <div class="info">
+                            <div class="profile-photo">
+                                <img src="{% static 'social/images/profile-13.jpg'%}" alt="">
+                            </div>
+                            <div>
+                                <h5>Hajia Bintu</h5>
+                                <p class="text-muted">
+                                    7 mutual friends
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="action">
+                            <button class="btn btn-primary">
+                                Accept
+                            </button>
+                            <button class="btn">
+                                Decline
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

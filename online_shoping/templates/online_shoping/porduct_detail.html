@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 43px;
+        }
+    </style>
+</head>
+<body>
+    <h1>prduct detail</h1>
+
+        <div class="pro">
+            <img src="{{product_detail.product_image.url}}" alt="" width="100px" height="190px" />
+            <div class="des">
+                <span>{{product_detail.brand}}</span>
+                <h5>{{product_detail.title}}</h5>
+                <p>{{product_detail.descrption}}</p>
+                <div class="star">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+
+                </div>
+                <h4>{{product_detail.selling_price}}</h4>
+                    <h4>{{product_detail.id}}</h4>
+                <!-- <form action="/add-to-cart/">
+                    <input type="" name="prod_id" value={{product_detail.id}} id="prod_id">
+                    
+                </form> -->
+                <a href="{% url 'add_to_cart' product_detail.id %}">
+                <button type="button">Add to cart</button>
+                </a>
+                <a href="">
+                <button type="button">Buy now</button>
+
+                </a>
+            </div>
+            <a href=""><i class="fa fa-shopping-cart cart"></i></a>
+        </div>
+   
+    
+</body>
+</html>

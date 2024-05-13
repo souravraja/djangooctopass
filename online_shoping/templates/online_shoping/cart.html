@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <h1>this is cart</h1>
+    <div class="contant">
+        {% for cart in carts %}
+        <h1>{{cart.user}}</h1>
+        <img src="{{cart.Product.product_image.url}}" alt="" width="100px" height="132px">
+        <h1>{{cart.Product.title}}</h1>
+        <h1>{{cart.Product.description}}</h1>
+        <h1>selling_price is {{cart.Product.selling_price}}</h1>
+        <h1>discounted_price is {{cart.Product.discounted_price}}</h1>
+        <h1>{{cart.quantity}}</h1>
+    {% endfor %}
+    </div>
+    <h1>total amount :{{amount}}</h1>
+    <h1>total amount whih shipping charge :{{totalamount}}</h1>
+    <a href="{% url 'check_out' %}"><button type="submit">check out</button></a>
+</body>
+</html>

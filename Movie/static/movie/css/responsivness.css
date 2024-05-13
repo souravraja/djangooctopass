@@ -1,0 +1,212 @@
+/* Responsive */
+
+@media(max-width:1170px){
+    /* .navbar{
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        transform: translateY(0);
+        
+        flex-direction: row;
+        justify-content: space-evenly;
+        row-gap: 1px;
+        padding: 10px;
+        border-top: 1px solid hsl(200 100% 99% / 5%);
+        background: linear-gradient(8deg,
+        hsl(240 17% 14% / 100%) 5%,
+        hsl(240 17% 14% / 90%) 100%,);
+        background-color: #1a0101de;
+    } */
+    .navbar {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        transform: translateY(0);
+        flex-direction: row;
+        justify-content: space-evenly;
+        row-gap: 1px;
+        background: #101010b3;
+        padding: 10px;
+        border-top: 1px solid hsl(200 100% 99% / 5%);
+}
+
+@media(max-width:1060px){
+    .container{
+        margin: 0 auto;
+        width: 95%;
+    }
+}
+@media(max-width:991px){
+    .movie-box{
+        height: 340px;
+    }
+    .movies-content{
+        grid-template-columns: repeat(auto-fit,minmax(214px,1fr));
+    }
+}
+@media(max-width:888px){
+    .nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 0;
+    }
+    .home{
+        min-height: 440px;
+        margin-top: 4rem !important;
+    }
+    .home-text{
+        padding-left: 25px;
+
+    }
+    .home-title{
+        font-size: 1.6rem;
+    }
+    .watch-btn span{
+        font-size: 0.9rem
+    };
+    .movie-title{
+        font-size: 1rem;
+        padding-right: 30px;
+    }
+    .play-container{
+        min-height: 440px;
+        margin-top: 4rem !important;
+    }
+    .play-movie{
+     
+        bottom: 14rem;
+        right: 4rem;
+    }
+}
+
+
+
+
+
+@media(max-width:888px){
+    .play-movie{
+        bottom: 14rem;
+        right: 4rem;
+    }
+    .cast{
+        justify-content: center;
+    }
+}
+
+/* For medium Devices/tablet Etc */
+@media(max-width:768px){
+    .nav{
+        padding: 11px 0;
+    }
+    .logo{
+        font-size: 1.2rem;
+    }
+    section{
+        padding: 2rem 0;
+    }
+    .home-img{
+        object-position: left;
+    }
+    .movie-type{
+        font-size: 0.875rem;
+        margin-top: 2px;
+    }
+    .tags span,
+    .about-movie p{
+        font-size: 0.875rem;
+    }
+    .play-text h2,
+    .about-movie h2{
+        font-size: 1.3rem;
+    }
+    .play-movie{
+        bottom: 10rem;
+        right: 2rem;
+    }
+}
+@media(max-width:514px){
+    .home{
+        min-height: 380px;
+    }
+    .heading{
+        padding: 2px 14px;
+        
+    }
+    .heading-title{
+        font-size: 1rem;
+    }
+    .play-text{
+        padding: 20px;
+    }
+    .play-movie{
+        bottom: 4rem;
+    }
+    .video-box{
+        width: 94%;
+    }
+    .cast-heading{
+        font-size: 1.1rem;
+    }
+    .cast-title{
+        font-size: 0.9rem;
+    }
+}
+@media(max-width:408px){
+    *{
+        scroll-padding-top: 5rem;
+    }
+    .nav{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 5px;
+    }
+    .search-box{
+        max-width: 100%;
+        width: 100%;
+        border-radius: 4px;
+        order: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .home,
+    .play-container{
+        margin-top: 7rem !important;
+    }
+    .movie-box{
+        height: 300px;
+    }
+    .movies-content{
+        grid-template-columns: repeat(auto-fit,minmax(150px 1fr));
+        gap: 1rem;
+    }
+}
+@media(max-width:370px){
+    .home{
+        min-height: 300px;
+    }
+    .movie-box{
+        height: 285px;
+    }
+    .user-img,
+    .watch-btn .bx{
+        width: 35px;
+        height: 35px;
+    }
+    .navbar{
+        justify-content: space-around;
+        padding: 8px 0;
+    }
+    .nav-link .bx{
+        font-size: 1.4rem;
+    }
+    .about-movie p{
+        text-align: justify;
+    }
+    .download-links{
+        grid-template-columns: 1fr;
+    }
+}

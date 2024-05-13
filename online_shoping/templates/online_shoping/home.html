@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="{% static 'online_shoping/css/home.css' %}">
+            <script src="{% static 'online_shoping/js/home.js' %}"" defer> </script>
+            <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        </head >
+
+            <body>
+                <section id="header">
+                    <a href="#"><img src="{% static 'online_shoping/img/logo.png'%}" alt="" srcset="" class="logo" /></a>
+                    <div>
+                        <ul id="navbar">
+                            <li><a href="{% url 'home' %}">Aioham Home</a></li>
+                            <li><a class="active" href="index.html">Home</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="block.html">Block</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">contact</a></li>
+                            <li><a href="{% url 'show-card' %}"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="hero">
+                    <h4>Trade-in-offer</h4>
+                    <h2>Super value deals</h2>
+                    <h1>on all products</h1>
+                    <p>Save more with coupons & up to 70% off!</p>
+                    <button type="submit">Shop Now</button>
+                </section>
+                <section id="feature" class="section-p1">
+                    <div class="fe-box">
+                        <img src="./../img/features/f1.png" alt="" />
+                        <h6>Free Shipping</h6>
+                    </div>
+                    <div class="fe-box">
+                        <img src="./../img/features/f2.png" alt="" />
+                        <h6>Online Order</h6>
+                    </div>
+                    <div class="fe-box">
+                        <img src="./../img/features/f3.png" alt="" />
+                        <h6>Save Money</h6>
+                    </div>
+                    <div class="fe-box">
+                        <img src="./../img/features/f4.png" alt="" />
+                        <h6>promotions</h6>
+                    </div>
+                    <div class="fe-box">
+                        <img src="./../img/features/f5.png" alt="" />
+                        <h6>Happy Sell</h6>
+                    </div>
+                    <div class="fe-box">
+                        <img src="./../img/features/f6.png" alt="" />
+                        <h6>F24/7 Support</h6>
+                    </div>
+                </section>
+                <section id="product1" class="section-p1">
+                    <h2>Featured Products</h2>
+                    <p>Summer Collection New Morden Design</p>
+                    <div class="pro-container">
+                        {% for shirt in shitr %}
+                        <a href="{% url 'product-detail' shirt.id %}">
+                        <div class="pro">
+                            <img src="{{shirt.product_image.url}}" alt="" />
+                            <div class="des">
+                                <span>{{shirt.brand}}</span>
+                                <h5>{{shirt.title}}</h5>
+                                <div class="star">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+
+                                </div>
+                                <h4>{{shirt.selling_price}}</h4>
+                            </div>
+                            <a href=""><i class="fa fa-shopping-cart cart"></i></a>
+                        </div>
+                    </a>
+                        {% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </section>
+                <section id="banner" class="section-m1">
+                    <h4>Repair Services</h4>
+                    <h2>Up t <span>70% off</span>  - All t-shirts &  Accessories</h2>
+                    <button class="normal">Explore More</button>
+                </section>
+                <section id="product1" class="section-p1">
+                    <h2>New Arrivals</h2>
+                    <p>Summer Collection New Morden Design</p>
+                    <div class="pro-container">
+                        {% for mob in mobile %}
+                        <div class="pro">
+                            <img src="{{mob.product_image.url}}" alt="" />
+                            <div class="des">
+                                <span>{{mob.brand}}</span>
+                                <h5>{{mob.title}}</h5>
+                                <div class="star">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+
+                                </div>
+                                <h4>{{mob.selling_price}}</h4>
+                            </div>
+                            <a href=""><i class="fa fa-shopping-cart cart"></i></a>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+  
+
+
+
+
+                </section>
+                <section id="sm-banner" class="section-p1">
+                    <div class="banner-box">
+                        <h4>crazy deals</h4>
+                        <h2>buy 1 get 1 free</h2>
+                        <span>The best classic dress in on sale at care</span>
+                        <button class="white">Learn More</button>
+                    </div>
+                    <div class="banner-box banner-box2">
+                        <h4>spring/summer</h4>
+                        <h2>upcomming Season</h2>
+                        <span>The best classic dress in on sale at care</span>
+                        <button class="white">collection</button>
+                    </div>
+                </section>
+                <section id="banner3">
+                    <div class="banner-box">
+                        <h2>SEASONAL SALE</h2>
+                        <H3>Winter collection -50% OFF</H3>
+                    </div>
+                    <div class="banner-box banner-box32">
+                        <h2>SEASONAL SALE</h2>
+                        <H3>Winter collection -50% OFF</H3>
+                    </div>
+                    <div class="banner-box banner-box323">
+                        <h2>SEASONAL SALE</h2>
+                        <H3>Winter collection -50% OFF</H3>
+                    </div>
+                </section>
+            </body>
+
+</html>

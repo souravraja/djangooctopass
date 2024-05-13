@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="{% static 'homepage/css/home.css' %}">
+</head>
+
+<body>
+    <div class="hero">
+        <video autoplay muted loop="true" plays-inline class="home__back__video">
+            <source src="{% static 'homepage/video/homebackground.mp4' %}" type="video/mp4">
+        </video>
+        <!-- <div class="search_box">
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="text" name="search_box" id=search_input">
+                <button type="submit">submit</button>
+            </form>
+
+        </div> -->
+        <div class="HOME__main__content">
+            <h1>OCTOPASS</h1>
+        </div>
+
+        <ul>
+            <!-- <li><a href="{% url 'booking' %}">booking</a></li> -->
+            <!-- <li><a href="{% url 'jprlar' %}">beuty parlar</a></li> -->
+            <!-- <li><a href="{% url 'bankingservices' %}">bank</a></li> -->
+            <!-- <li><a href="{% url 'doctor' %}">doctor</a></li> -->
+            <!-- <li><a href="{% url 'digitalbussiness' %}">digitalbussiness</a></li> -->
+            <!-- <li><a href="{% url 'education' %}">education</a></li> -->
+            <!-- <li><a href="{% url 'eventorganizer' %}">eventorganizer</a></li> -->
+            <!-- <li><a href="{% url 'home' %}">home</a></li> -->
+            <!-- <li><a href="{% url 'yourownshop' %}">my shop</a></li> -->
+            <!-- <li><a href="{% url 'online_shoping_home' %}"> Shoptyfi</a></li> -->
+            <!-- <li><a href="{% url 'matrimonial' %}">matrimonial</a></li> -->
+            <li><a href="{% url 'movie' %}">movie</a></li>
+            <!-- <li><a href="{% url 'news' %}">news</a></li> -->
+            <!-- <li><a href="{% url 'realstate' %}">realstate</a></li> -->
+            <!-- <li><a href="{% url 'rent' %}">rent everythig</a></li> -->
+            <!-- <li><a href="{% url 'reviewhomepage' %}">review</a></li> -->
+            <!-- <li><a href="{% url 'socialmedia' %}">social media</a></li> -->
+            <!-- <li><a href="{% url 'translator' %}">translator</a></li> -->
+            <!-- <li><a href="{% url 'signin' %}">user ragistration</a></li> -->
+
+        </ul>
+
+    </div>
+
+</body>
+
+</html>
