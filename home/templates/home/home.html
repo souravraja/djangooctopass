@@ -32,7 +32,7 @@
             <!-- <li><a href="{% url 'bankingservices' %}">bank</a></li> -->
             <!-- <li><a href="{% url 'doctor' %}">doctor</a></li> -->
             <li><a href="{% url 'digitalbussiness' %}">digitalbussiness</a></li>
-            <!-- <li><a href="{% url 'education' %}">education</a></li> -->
+       
             <!-- <li><a href="{% url 'eventorganizer' %}">eventorganizer</a></li> -->
             <!-- <li><a href="{% url 'home' %}">home</a></li> -->
             <!-- <li><a href="{% url 'yourownshop' %}">my shop</a></li> -->
@@ -44,7 +44,8 @@
             <!-- <li><a href="{% url 'rent' %}">rent everythig</a></li> -->
             <!-- <li><a href="{% url 'reviewhomepage' %}">review</a></li> -->
             {% if user.is_authenticated %}
-            <li><a href="{% url 'socialmedia' %}">social media</a></li>
+                <li><a href="{% url 'education' %}">education</a></li>
+                <li><a href="{% url 'socialmedia' %}">social media</a></li>
             {% endif %}
             <!-- <li><a href="{% url 'translator' %}">translator</a></li> -->
             <li><a href="{% url 'signin' %}">user ragistration</a></li>
