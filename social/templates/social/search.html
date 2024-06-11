@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>search enegine</h1>
+    {% for users in username_profile_list %}
+    <a href="{% url 'profile' users.user.id %}">
+    {{users}}
+    <img src="{{users.profileimg.url}}" alt="" width="100rem" height="100rem">
+    {{users.bio}}
+    </a>
+    {% endfor %}
+        {{user_prfile}}
+    
+</body>
+</html>

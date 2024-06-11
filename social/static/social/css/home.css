@@ -403,6 +403,9 @@ gap: 1rem;
 }
 
 /* ----------   RIGHT        --------------- */
+/* main .container .right{
+   position: fixed !important;
+} */
 main .container .right{
    height: max-content;
    position: sticky;

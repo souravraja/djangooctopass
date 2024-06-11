@@ -505,3 +505,47 @@
  .vkdsjhuijkdfs{
    display: flex;
  }
+
+
+
+
+
+
+
+ @media screen and(max-width=1200){
+   .container{
+      width: 96%;
+   }
+   main .container{
+      grid-template-columns: 5rem auto 30vw;
+      gap: 1rem;
+   }
+   .left{
+      width: 5rem;
+      z-index: 5;
+
+   }
+   main .container .left .profile{
+      display: none;
+
+   }
+   .sidebar h3{
+      display: none;
+   }
+   .left .btn{
+      display: none;
+   }
+ }
+
+
+
+ /* MEDIA QURIES FOR SMALL TABLETS AND MOBILE pHONES */
+
+ @media screen and(max-width:992px) {
+   nav .search-bar{
+      display: none;
+   }
+   .main .container{
+      grid-template-columns: 0 auto 5rem;
+   }
+ }

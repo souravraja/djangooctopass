@@ -43,9 +43,11 @@
             <!-- <li><a href="{% url 'realstate' %}">realstate</a></li> -->
             <!-- <li><a href="{% url 'rent' %}">rent everythig</a></li> -->
             <!-- <li><a href="{% url 'reviewhomepage' %}">review</a></li> -->
-            <!-- <li><a href="{% url 'socialmedia' %}">social media</a></li> -->
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'socialmedia' %}">social media</a></li>
+            {% endif %}
             <!-- <li><a href="{% url 'translator' %}">translator</a></li> -->
-            <!-- <li><a href="{% url 'signin' %}">user ragistration</a></li> -->
+            <li><a href="{% url 'signin' %}">user ragistration</a></li>
 
         </ul>
 

@@ -70,6 +70,7 @@ def signup(request):
 def profile_settings(request):
     user_profile=Profile.objects.get(user=request.user)
     if request.method == 'POST':
+        print('post method.....................')
         if request.FILES.get('image') ==None:
             print('with image')
             image=user_profile.profileimg
@@ -92,4 +93,11 @@ def profile_settings(request):
             user_profile.location=location
             user_profile.save()
         return redirect('./../settings/')
-    return render(request,'userragistration/profile_settings.html')
+    else:
+        print('get method..........')
+        return render(request,'userragistration/profile_settings.html')
+    
+
+def prfile(request,pk):
+    prfile=Profile.objects.get(id_user=pk)
+    return render(request,'userragistration/profile.html',{'profile':prfile})
