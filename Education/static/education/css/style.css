@@ -73,7 +73,7 @@ img{
     display: inline-block;
     background-color: var(--color-white);
     color: var(--color-black);
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     border: 1px solid transparent;
     font-weight: 500;
     transition: var(--transition);
@@ -144,8 +144,9 @@ header{
     gap: 5rem;
     height: 100%;
 }
-.header__left{
+.header__left p{
     margin: 1rem 0 2.4rem;
+    color: #54d3dc;
 }
 /* ------------------   CATEGORIES                        -------------------------  */
 .categories{
@@ -159,7 +160,7 @@ header{
 .categories__container{
     display: grid;
     grid-template-columns: 40% 60%;
-    /* gap: 4rem; */
+    gap: 4rem;
 }
 .categories__left{
     margin-right: 4rem;
@@ -196,7 +197,7 @@ header{
 }
 .category__icon{
     background: var(--color-primary);
-    padding: 0.9rem;
+    padding: 0.7rem;
     border-radius: 0.9rem;
 }
 
