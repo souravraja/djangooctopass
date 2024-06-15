@@ -11,45 +11,36 @@
 
 <body>
     <div class="hero">
-        <video autoplay muted loop="true" plays-inline class="home__back__video">
-            <source src="{% static 'homepage/video/homebackground.mp4' %}" type="video/mp4">
-        </video>
-        <!-- <div class="search_box">
-            <form action="" method="post">
-                {% csrf_token %}
-                <input type="text" name="search_box" id=search_input">
-                <button type="submit">submit</button>
-            </form>
-
-        </div> -->
         <div class="HOME__main__content">
             <h1>OCTOPASS</h1>
         </div>
-
-        <ul>
-            <!-- <li><a href="{% url 'booking' %}">booking</a></li> -->
-            <!-- <li><a href="{% url 'jprlar' %}">beuty parlar</a></li> -->
-            <!-- <li><a href="{% url 'bankingservices' %}">bank</a></li> -->
-            <!-- <li><a href="{% url 'doctor' %}">doctor</a></li> -->
-            <li><a href="{% url 'digitalbussiness' %}">digitalbussiness</a></li>
+        <div class="contain">
+            <ul>
+            <!-- <a href="{% url 'booking' %}" class="card">booking</a> -->
+            <!-- <a href="{% url 'jprlar' %}" class="card">beuty parlar</a> -->
+            <!-- <a href="{% url 'bankingservices' %}" class="card">bank</a> -->
+            <!-- <a href="{% url 'doctor' %}" class="card">doctor</a>  -->
+            <a href="{% url 'digitalbussiness' %}" class="card"><li >digitalbussiness</li></a>
        
-            <!-- <li><a href="{% url 'eventorganizer' %}">eventorganizer</a></li> -->
-            <!-- <li><a href="{% url 'home' %}">home</a></li> -->
-            <!-- <li><a href="{% url 'yourownshop' %}">my shop</a></li> -->
-            <!-- <li><a href="{% url 'online_shoping_home' %}"> Shoptyfi</a></li> -->
-            <!-- <li><a href="{% url 'matrimonial' %}">matrimonial</a></li> -->
-            <li><a href="{% url 'movie' %}">movie</a></li>
-            <!-- <li><a href="{% url 'news' %}">news</a></li> -->
-            <!-- <li><a href="{% url 'realstate' %}">realstate</a></li> -->
-            <!-- <li><a href="{% url 'rent' %}">rent everythig</a></li> -->
-            <!-- <li><a href="{% url 'reviewhomepage' %}">review</a></li> -->
+            <!-- <a href="{% url 'eventorganizer' %}" class="card">eventorganizer</a> -->
+            <!-- <a href="{% url 'home' %}" class="card">home</a> -->
+            <!-- <a href="{% url 'yourownshop' %}" class="card">my shop</a> -->
+            <!-- <a href="{% url 'online_shoping_home' %}" class="card"> Shoptyfi</a> -->
+            <!-- <a href="{% url 'matrimonial' %}" class="card">matrimonial</a> -->
+            <a href="{% url 'movie' %}" class="card">movie</a>
+            <!-- <a href="{% url 'news' %}" class="card">news</a> -->
+            <!-- <a href="{% url 'realstate' %}" class="card">realstate</a> -->
+            <!-- <a href="{% url 'rent' %}" class="card">rent everythig</a> -->
+            <!-- <a href="{% url 'reviewhomepage' %}" class="card">review</a> -->
             {% if user.is_authenticated %}
-                <li><a href="{% url 'education' %}">education</a></li>
-                <li><a href="{% url 'socialmedia' %}">social media</a></li>
+                <a href="{% url 'education' %}" class="card">education</a>
+                <a href="{% url 'socialmedia' %}" class="card">social media</a>
             {% endif %}
-            <!-- <li><a href="{% url 'translator' %}">translator</a></li> -->
-            <li><a href="{% url 'signin' %}">signin/login</a></li>
+            <!-- <a href="{% url 'translator' %}" class="card">translator</a> -->
+            <a href="{% url 'signin' %}" class="card">signin/login</a>
         </ul>
+        </div>
+       
     </div>
 
 </body>

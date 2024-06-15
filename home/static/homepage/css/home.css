@@ -2,92 +2,56 @@
     padding: 0;
     margin: 0;
 }
-
-
-.search_box{
+body{
+    width: 100vw;
+    height: 100vh;
+    background: blanchedalmond no-repeat ;
+    background-position: center;
+}
+.hero{
+    margin: 2rem;
+    padding: 3rem;
+}
+.contain{
+    
+}
+.hero .contain ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
     text-align: center;
-    padding: 35px;
-    background-color: aqua;
-
-}
-#search_input{
-    width: 54%;
-    width: 100%;
-}
-a{
-    text-decoration: none;
-    font-size: 34px;
-    border: 3px solid rgb(103, 32, 32);
-    background-color: whitesmoke;
-    color:rgb(186, 47, 156);
-    font-weight: 43px;
-    margin: 6px;
-    border-radius: 16px;
-    list-style-type: none;
-    padding: 12px 23px;
-    background-image: url('https://cdn.pixabay.com/photo/2023/08/21/03/34/droplets-8203505_1280.jpg') ;
-
-}
-
-ul{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
-    /* text-decoration: none; */
     list-style-type: none;
-    padding: 0 23px;
-    margin: 23px;
-
 }
 
-ul>li{
-    padding: 5px;
-    margin: 6px;
-    list-style-type: none;
-
-}
-a{
+.hero .contain ul a{
     text-decoration: none;
-}
-li{
-    list-style-type: none;
-}
-
-
-.HOME__main__content{
-    font-size: 160px;
-    color: #fff;
-    font-weight: 600;
+    color: wheat;
     text-align: center;
-    align-items: center;
+    font-size: 35px;
+
 }
-.home__back__video{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    bottom: 0;
-    min-width: 100vw;
-    min-height: 100vh;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.card { 
+    display: inline-block; 
+    padding: 12px 24px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    text-align: center; 
+    text-decoration: none; 
+    background-color: #007bff; 
+    color: #fff; 
+    border-radius: 4px; 
+    transition: background-color 0.3s ease; 
+  } 
+   
+  .card:hover { 
+    background-color: #0062cc; 
+  } 
+   
+  @media screen and (max-width: 767px) { 
+    .card { 
+      display: block; 
+      width: 100%; 
+      margin-bottom: 10px; 
+    } 
+  } 
