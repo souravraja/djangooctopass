@@ -38,7 +38,7 @@
             </div>
             <!-- User -->
             <a href="#" class="user">
-                <img src="{% static 'movie/images/user.jpg' %}" alt="" class="user-img">
+                <img src="{{profile.profileimg.url}}" alt="" class="user-img">
             </a>
 
             <!-- navbar -->
@@ -79,7 +79,7 @@
             <h1 class="home-title">{{poster.movie_name}}</p>
             <a href="{% url 'playmovie' poster.id %}" class="watch-btn">
                 <i class="bx bx-right-arrow"></i>
-                <span>watch The trailer</span>
+                <span>Click To SEE</span>
             </a>
         </div> 
         {% endfor %}

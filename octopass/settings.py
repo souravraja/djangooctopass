@@ -50,13 +50,14 @@ INSTALLED_APPS = [
     'rent',
     'social',
     'translator',
-    'userragistration',
     'review',
     'digitalBussiness',
     'Education',
     'eventOrganizer',
     'realState',
     'transport',
+    'userragistration',
+    
 ]
 
 MIDDLEWARE = [

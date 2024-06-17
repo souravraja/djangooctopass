@@ -65,7 +65,8 @@
         font-size: 1.6rem;
     }
     .watch-btn span{
-        font-size: 0.9rem
+        font-size: 1.9rem;
+        background:rgb(20, 64, 116);
     };
     .movie-title{
         font-size: 1rem;
