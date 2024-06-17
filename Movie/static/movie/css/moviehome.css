@@ -86,10 +86,15 @@ header{
     border-radius: 4rem;
     margin-right: 7rem;
 }
+.search-box .bx-search{
+    background: var(--container-color);
+    color: wheat;
+}
 
 .search-box .bx{
     font-size: 1.8rem;
-    background-color: aqua;
+    /* background-color: aqua; */
+    
     border: none;
 }
 .search-box form .bx:hover{

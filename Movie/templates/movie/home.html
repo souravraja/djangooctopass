@@ -28,18 +28,18 @@
                 Octopass<span>Movie</span>
             </a>
             <!-- search Box -->
-            <!-- <div class="search-box">
-                <form action="" method="post">
+            <div class="search-box">
+                <form action="" method="POST">
                     {% csrf_token %}
-                    <input type="search" name="movie-search" id="search-input" placeholder="Search moie">
-                    <button type="submit"><i class="bx bx-search"></i></button> -->
+                    {{findmovie}}
+                    <button type="submit"><i class="bx bx-search"></i></button> 
                     <!-- <i class="bx bx-search"></i> -->
-                <!-- </form> -->
-            <!-- </div> -->
+                </form>
+            </div>
             <!-- User -->
-            <!-- <a href="#" class="user">
+            <a href="#" class="user">
                 <img src="{% static 'movie/images/user.jpg' %}" alt="" class="user-img">
-            </a> -->
+            </a>
 
             <!-- navbar -->
             <div class="navbar">
@@ -63,6 +63,10 @@
                     <i class="bx bx-heart"></i>
                     <span class="nav-link-title">Favourite</span>
                 </a>
+                <a href="{% url 'movieupload' %}" class="nav-link">
+                    <i class="bx bx-upload"></i>
+                    <span class="nav-link-title">upload</span>
+                </a>
             </div>
         </div>
     </header>
@@ -77,7 +81,7 @@
                 <i class="bx bx-right-arrow"></i>
                 <span>watch The trailer</span>
             </a>
-        </div>
+        </div> 
         {% endfor %}
     </section>
     

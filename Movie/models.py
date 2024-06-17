@@ -79,5 +79,6 @@ class movie(models.Model):
     movie_upload_time=models.DateTimeField(auto_now_add=True)
     movie_title_image=models.ImageField(upload_to='movie/movieTitle',blank=True)
     movie_file=models.URLField(max_length=3000,blank=True,default=None)
+    movie_download_file=models.URLField(max_length=3000,blank=True,default=None)
     def __str__(self):
         return self.movie_name 

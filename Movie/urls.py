@@ -7,6 +7,6 @@ urlpatterns = [
     path('explore/',views.explore,name='explore'),
     path('trending/',views.trending,name='trending'),
     path('favourite/',views.favourite,name='favourite'),
-    path('movieuplofrre/',views.movieuploadform)
+    path('movieuplode/',views.movieuploadform,name='movieupload')
     # path('playmovie',views.playmovie,name='playmovie')
 ]

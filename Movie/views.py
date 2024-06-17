@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import movie
-from .forms import movieform
+from .forms import movieform,SearchMovieName
 # Create your views here.
 def moviehome(request):
     romanticmovie=movie.objects.filter(movie_type='Romance')
@@ -11,9 +11,18 @@ def moviehome(request):
     hindimovie=movie.objects.filter(movie_catagory_title='hindi')
     bengolimovie=movie.objects.filter(movie_catagory_title='Bangoli')
     hindidubmovie=movie.objects.filter(movie_catagory_title='Hindi-Dub')
- 
+    if request.method=='post':
+        print('post data')
+        fm=SearchMovieName(request.POST)
+        print('is out of valid')
+        if fm.is_valid():
+            print('is valid')
+            print('name',fm.cleaned_data['nameofthemovie'])
+    else:
+        fm=SearchMovieName()
+        print('get data1')
     return render(request,'movie/home.html',{'poster':poster,'popolarmovie':popolarmovie,
-    'newmovie':newmovie,'hollywoodmovie':hollywoodmovie,'hindidubmovie':hindidubmovie,'benglimovie':bengolimovie,'hindimovie':hindimovie})
+    'newmovie':newmovie,'hollywoodmovie':hollywoodmovie,'hindidubmovie':hindidubmovie,'benglimovie':bengolimovie,'hindimovie':hindimovie,'findmovie':fm})
     
 
 def playmovie(request,pk):
@@ -46,3 +55,4 @@ def movieuploadform(request):
         form.save()
     context['form']=form
     return render(request,'movie/form.html',context)
+
