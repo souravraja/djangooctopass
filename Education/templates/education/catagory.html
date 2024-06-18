@@ -1,0 +1,29 @@
+{% extends "education/home.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'education/css/catagory.css' %}">
+{% endblock css %}
+{% block header %}
+{% endblock header %}
+{% block categories %}
+<div class="categories__right">
+    {% for catogary in cotagory %}
+    <article class="category">
+        <a href="{% url 'education_catagory_course' catogary.id %}">
+            <span class="category__icon"><i class="uil uil-bitcoin-circle"></i></span>
+            <h5>{{catogary.catagory_name}}</h5>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum repellendus, quia rerum amet</p>
+        </a>
+        
+    </article>
+{% endfor %}
+</div>
+{% endblock categories %}
+{% block course %}
+{% endblock course %}
+{% block askQuestions %}
+{% endblock askQuestions %}
+{% block Testimonials %}
+{% endblock Testimonials %}
+{%  block footer%}
+{%  endblock footer%}

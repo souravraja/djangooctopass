@@ -15,34 +15,32 @@
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 />
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-
+{% block css %}
+{% endblock css %}
 </head>
  
 <body>
     <nav>
         <div class="container nav__container">
-            <a href="index.html">
-                <h4>Aoiham_<span>Education</span></h4>
-            </a>
+            <h4><a href="{% url 'home' %}">Aoiham_</a><span><a href="{% url 'education' %}">Education</a></span></h4>
             <ul class="nav__menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="{% url 'education' %}">Home</a></li>
+                <li><a href="{% url 'education_catogory' %}">Categories</a></li>
+                <li><a href="{% url 'education_course' %}">Courses</a></li>
+                <li><a href="{% url 'contect' %}">Contact</a></li>
             </ul>
             <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
             <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
         </div>
     </nav>
     <!-- end of nav bar -->
+     {% block header %}
     <header>
         <div class="container header__container">
             <div class="header__left">
                 <h1>Grow your skills to andvance your career path</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum quasi aliquid, laudantium delectus
-                    rem blanditiis ex in, iusto nulla voluptates error atque dolorem voluptas officia est excepturi ut
-                    omnis assumenda?</p>
-                <a href="courses.html" class="btn btn-primary">Get Started</a>
+                <p>As a teacher, you know that the children of today are the leaders of tomorrow. A quality education can transform a kid at school into an innovative leader in the workplace and community at large.</p>
+                <a href="{% url 'education_course' %}"" class="btn btn-primary">Get Started</a>
             </div>
             <div class="header__right">
                 <div class="hrader__right-image">
@@ -51,128 +49,59 @@
             </div>
         </div>
     </header>
+    {% endblock header %}
     <!-- ==================                    END OF HEADER          ================================= -->
 
 
     <!-- ---------------------   CATEGORIES                   ------------------------------ -->
+     {% block categories %}
     <section class="categories">
         <div class="container categories__container">
             <div class="categories__left">
                 <h1>Categories</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magni omnis perferendis,</p>
-                <a href="#" class="btn">Learn More</a>
+                <a href="{% url 'education_catogory' %}" class="btn">ALL CATEGORY</a>
             </div>
             <div class="categories__right">
+                {% for catogary in cotagory %}
                 <article class="category">
-                    <span class="category__icon"><i class="uil uil-bitcoin-circle"></i></span>
-                    <h5>Blockchain</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum repellendus, quia rerum amet</p>
+                    <a href="{% url 'education_catagory_course' catogary.id %}">
+                        <span class="category__icon"><i class="uil uil-bitcoin-circle"></i></span>
+                        <h5>{{catogary.catagory_name}}</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum repellendus, quia rerum amet</p>
+                    </a>
+                    
                 </article>
-                <article class="category">
-                    <span class="category__icon"><i class="uil uil-bitcoin-circle"></i></span>
-                    <h5>Blockchain</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum repellendus, quia rerum amet</p>
-                </article>
-                <article class="category">
-                    <span class="category__icon"><i class="uil uil-bitcoin-circle"></i></span>
-                    <h5>Blockchain</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum repellendus, quia rerum amet</p>
-                </article>
-                <article class="category">
-                    <span class="category__icon"><i class="uil uil-bitcoin-circle"></i></span>
-                    <h5>Blockchain</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum repellendus, quia rerum amet</p>
-                </article>
-                <article class="category">
-                    <span class="category__icon"><i class="uil uil-bitcoin-circle"></i></span>
-                    <h5>Blockchain</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum repellendus, quia rerum amet</p>
-                </article>
-                <article class="category">
-                    <span class="category__icon"><i class="uil uil-bitcoin-circle"></i></span>
-                    <h5>Blockchain</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum repellendus, quia rerum amet</p>
-                </article>
+            {% endfor %}
             </div>
         </div>
     </section>
 
-
+    {% endblock categories %}
     <!-- ======================        OUR POPULAR COURSES                   ======================== -->
+    {% block course %}
     <section class="courses">
-        <h2>Our Popular Courses</h2>
+        <h2>    {% block courseheading %}Our Popular Courses{% endblock courseheading %}</h2>
         <div class="container courses__container">
-
-            <article class="course">
-                <div class="course__image">
-                    <img src="{% static 'education/image/images/course1.jpg' %}" alt="">
-                </div>
-                <div class="course__info">
-                    <h4>Responsive social website UI Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum ipsam molestiae numquam,
-                        impedit accusamus explicabo!</p>
-                    <a href="'course.html" class="btn btn-primary">Larn More</a>
-                </div>
-            </article>
-            <article class="course">
-                <div class="course__image">
-                    <img src="{% static 'education/image/images/course2.jpg' %}" alt="">
-                </div>
-                <div class="course__info">
-                    <h4>Responsive social website UI Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum ipsam molestiae numquam,
-                        impedit accusamus explicabo!</p>
-                    <a href="'course.html" class="btn btn-primary">Larn More</a>
-                </div>
-            </article>
-            <article class="course">
-                <div class="course__image">
-                    <img src="{% static 'education/image/images/course3.jpg' %}" alt="">
-                </div>
-                <div class="course__info">
-                    <h4>Responsive social website UI Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum ipsam molestiae numquam,
-                        impedit accusamus explicabo!</p>
-                    <a href="'course.html" class="btn btn-primary">Larn More</a>
-                </div>
-            </article>
-            <article class="course">
-                <div class="course__image">
-                    <img src="{% static 'education/image/images/course4.jpg' %}" alt="">
-                </div>
-                <div class="course__info">
-                    <h4>Responsive social website UI Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum ipsam molestiae numquam,
-                        impedit accusamus explicabo!</p>
-                    <a href="'course.html" class="btn btn-primary">Larn More</a>
-                </div>
-            </article>
-            <article class="course">
-                <div class="course__image">
-                    <img src="{% static 'education/image/images/course5.jpg' %}" alt="">
-                </div>
-                <div class="course__info">
-                    <h4>Responsive social website UI Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum ipsam molestiae numquam,
-                        impedit accusamus explicabo!</p>
-                    <a href="'course.html" class="btn btn-primary">Larn More</a>
-                </div>
-            </article>
-            <article class="course">
-                <div class="course__image">
-                    <img src="{% static 'education/image/images/course6.jpg' %}" alt="">
-                </div>
-                <div class="course__info">
-                    <h4>Responsive social website UI Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum ipsam molestiae numquam,
-                        impedit accusamus explicabo!</p>
-                    <a href="'course.html" class="btn btn-primary">Larn More</a>
-                </div>
-            </article>
-
+            {% for subject in subject %}
+        <article class="course">
+            <a href="{% url 'course_details' subject.id %}">
+            <div class="course__image">
+                <img src="{{subject.subject_img.url}}" alt="">
+            </div>
+            <div class="course__info">
+                <h4>{{subject.subject_name}}</h4>
+                <p>{{subject.subject_description}}</p>
+                <a href="'#" class="btn btn-primary">Larn More</a>
+            </div>
+        </a>
+        </article>
+        {% endfor %}
         </div>
     </section>
+    {% endblock course %}
 <!-- END OF COURSE  -->
+{% block askQuestions %}
     <section class="faqs">
         <h2>Frequently Asked Questions</h2>
         <div class="container faqs__container">
@@ -234,9 +163,9 @@
             </article>
         </div>
     </section>
-
-
-
+    {% endblock askQuestions %}
+    
+    {% block Testimonials %}
     <section class="container testimonials__Container mySwiper">
         <h2>Student's Testimonials</h2>
         <div class="swiper-wrapper">
@@ -341,9 +270,9 @@
             </article>
         </div>
     </section>
-    <footer>
-        <h1>footer is due</h1>
-    </footer>
+    {% endblock Testimonials %}
+  
+
 </body>
 
 </html>

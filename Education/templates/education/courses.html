@@ -1,0 +1,35 @@
+{% extends "education/home.html" %}
+{% load static %}
+{% block header %}
+{% endblock header %}
+{% block categories %}
+{% endblock categories %}
+{% block course %}
+<section class="courses">
+    <h2>    {% block courseheading %}Our Courses{% endblock courseheading %}</h2>
+    <div class="container courses__container">
+        {% for subject in subject %}
+        
+        <article class="course">
+            <a href="{% url 'course_details' subject.id %}">
+            <div class="course__image">
+                <img src="{{subject.subject_img.url}}" alt="">
+            </div>
+            <div class="course__info">
+                <h4>{{subject.subject_name}}</h4>
+                <p>{{subject.subject_description}}</p>
+                <a href="#" class="btn btn-primary">Larn More</a>
+            </div></a>
+        </article>
+        
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock course %}
+{% block askQuestions %}
+{% endblock askQuestions %}
+{% block Testimonials %}
+{% endblock Testimonials %}
+{%  block footer%}
+{%  endblock footer%}

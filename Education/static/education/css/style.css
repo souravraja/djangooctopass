@@ -153,7 +153,7 @@ header{
     background: var(--color-bg1);
     height: 35rem;
 }
-.categories h1{
+.categories  h1{
     line-height: 1;
     margin-bottom: 3rem;
 }
@@ -201,15 +201,20 @@ header{
     border-radius: 0.9rem;
 }
 
-.category h5{
+.category a h5{
     margin: 2rem 0 1rem;
+    font-size: 1.5em;
+    color: #6e3666;
+    background-color: #fff;
+    border-radius: 0 40%;
+    text-align: center;
 }
 .category p{
     font-size: 0.85rem;
 }
 /* ===================      POPULAR COURSES       ============================= */
 .courses{
-    margin-top: 10rem;
+    margin-top: 1rem;
 }
 .courses__container{
     display: grid;
@@ -325,7 +330,7 @@ header{
 
 
 
-
+/* 
 nav button{
     display: inline-block;
     background: transparent;
@@ -361,4 +366,4 @@ nav button#close-menu-btn{
 .nav__menu li a:hover{
     background: var(--color-bg2);
     color: var(--color-white);
-}
+} */
