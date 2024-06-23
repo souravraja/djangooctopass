@@ -16,9 +16,10 @@ def course(request,pk=None):
         Catagory=catagory.objects.get(pk=pk)
         name=Catagory.catagory_name
         print(type(name))
-        # subject=Subject.objects.filter(catagory=name)
-        # print(subject)
-    subject=Subject.objects.all()
+        subject=Subject.objects.filter(catagory=Catagory)
+        print(subject)
+    else:
+        subject=Subject.objects.all()
     context={'subject':subject}
     return render(request,'education/courses.html',context)
 

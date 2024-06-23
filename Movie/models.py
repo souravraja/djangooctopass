@@ -81,4 +81,4 @@ class movie(models.Model):
     movie_file=models.URLField(max_length=3000,blank=True,default=None)
     movie_download_file=models.URLField(max_length=3000,blank=True,default=None)
     def __str__(self):
-        return self.movie_name 
+        return self.movie_name  

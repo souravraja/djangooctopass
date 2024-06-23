@@ -41,6 +41,7 @@ class Subject(models.Model):
     subject_language=models.CharField(max_length=2000,blank=True,default=None,null=True)
     catagory=models.ForeignKey(catagory,on_delete=models.CASCADE,default=None,blank=True,null=True)
     subject_price=models.IntegerField(default=None,blank=True,null=True)
+    subject_syllybas=models.FileField(upload_to='education pdf file',default=None,blank=True,null=True)
     def __str__(self):
         return self.subject_name
 

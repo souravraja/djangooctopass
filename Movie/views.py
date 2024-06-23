@@ -14,7 +14,7 @@ def moviehome(request):
     if request.method=='post':
         print('post data')
         fm=SearchMovieName(request.POST)
-        print('is out of valid')
+        print('is out of valid') 
         if fm.is_valid():
             print('is valid')
             print('name',fm.cleaned_data['nameofthemovie'])
