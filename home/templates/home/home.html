@@ -11,7 +11,7 @@
 
 <body>
     <div class="hero">
-        <a class="HOME__main__content">
+        <a class="HOME__main__content" href="{% url 'home' %}">
             <h1>Aioham</h1>
         </a>
         <div class="contain">
@@ -21,9 +21,7 @@
             <!-- <a href="{% url 'bankingservices' %}" class="card">bank</a> -->
             <!-- <a href="{% url 'doctor' %}" class="card">doctor</a>  -->
             <a href="{% url 'digitalbussiness' %}" class="card"><li >digitalbussiness</li></a>
-       
             <a href="{% url 'eventorganizer' %}" class="card">eventorganizer</a>
-            <!-- <a href="{% url 'home' %}" class="card">home</a> -->
             <!-- <a href="{% url 'yourownshop' %}" class="card">my shop</a> -->
             <!-- <a href="{% url 'online_shoping_home' %}" class="card"> Shoptyfi</a> -->
             <!-- <a href="{% url 'matrimonial' %}" class="card">matrimonial</a> -->
@@ -32,10 +30,9 @@
             <!-- <a href="{% url 'realstate' %}" class="card">realstate</a> -->
             <!-- <a href="{% url 'rent' %}" class="card">rent everythig</a> -->
             <!-- <a href="{% url 'reviewhomepage' %}" class="card">review</a> -->
-            {% if user.is_authenticated %}
-                <a href="{% url 'education' %}" class="card">education</a>
-                <a href="{% url 'socialmedia' %}" class="card">social media</a>
-            {% endif %}
+            <a href="{% url 'education' %}" class="card">education</a>
+            <a href="{% url 'socialmedia' %}" class="card">social media</a>
+            
             <!-- <a href="{% url 'translator' %}" class="card">translator</a> -->
             <a href="{% url 'signin' %}" class="card">signin/login</a>
         </ul>
