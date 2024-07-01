@@ -542,7 +542,8 @@ html::-webkit-scrollbar-thumb {
 @media (max-width: 768px) {
   #menu-bars {
     display: initial;
-  }
+    margin-right: 45rem;
+}
 
   .header .navbar {
     position: absolute;

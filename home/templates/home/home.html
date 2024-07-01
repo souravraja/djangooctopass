@@ -1,45 +1,139 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aioham</title>
-    <link rel="stylesheet" href="{% static 'homepage/css/home.css' %}">
-</head>
+    <link rel="stylesheet" href="{% static 'homepage/css/home.css' %}" />
+  </head>
 
-<body>
+  <body>
     <div class="hero">
+      <div class="hedier">
         <a class="HOME__main__content" href="{% url 'home' %}">
-            <h1>Aioham</h1>
+          <h1>Aioham</h1>
         </a>
-        <div class="contain">
-            <ul>
-            <!-- <a href="{% url 'booking' %}" class="card">booking</a> -->
-            <!-- <a href="{% url 'jprlar' %}" class="card">beuty parlar</a> -->
-            <!-- <a href="{% url 'bankingservices' %}" class="card">bank</a> -->
-            <!-- <a href="{% url 'doctor' %}" class="card">doctor</a>  -->
-            <a href="{% url 'digitalbussiness' %}" class="card"><li >digitalbussiness</li></a>
-            <a href="{% url 'eventorganizer' %}" class="card">eventorganizer</a>
-            <!-- <a href="{% url 'yourownshop' %}" class="card">my shop</a> -->
-            <!-- <a href="{% url 'online_shoping_home' %}" class="card"> Shoptyfi</a> -->
-            <!-- <a href="{% url 'matrimonial' %}" class="card">matrimonial</a> -->
-            <a href="{% url 'movie' %}" class="card">movie</a>
-            <!-- <a href="{% url 'news' %}" class="card">news</a> -->
-            <!-- <a href="{% url 'realstate' %}" class="card">realstate</a> -->
-            <!-- <a href="{% url 'rent' %}" class="card">rent everythig</a> -->
-            <!-- <a href="{% url 'reviewhomepage' %}" class="card">review</a> -->
-            <a href="{% url 'education' %}" class="card">education</a>
-            <a href="{% url 'socialmedia' %}" class="card">social media</a>
-            
-            <!-- <a href="{% url 'translator' %}" class="card">translator</a> -->
-            <a href="{% url 'signin' %}" class="card">signin/login</a>
-        </ul>
-        </div>
-       
+        
+          <a href="{% url 'signin' %}" class="logo"><img src="https://e7.pngegg.com/pngimages/84/165/png-clipart-united-states-avatar-organization-information-user-avatar-service-computer-wallpaper-thumbnail.png" alt="signin/login"></a>
+        
+      </div>
+
+      <div class="contain">
+          <a href="{% url 'digitalbussiness' %}" class="content">
+            <img src="https://img.freepik.com/free-vector/illustration-social-media-concept_53876-36965.jpg?size=626&ext=jpg" alt="" />
+            <div class="card">
+              <h2>digitalbussiness</h2> </div>
+          </a>
+
+
+          <a href="{% url 'eventorganizer' %}" class="content">
+            <video width="320" height="240" autoplay loop muted>
+                <source src="https://videos.pexels.com/video-files/2890236/2890236-hd_1920_1080_30fps.mp4 " type="video/mp4" />
+                <source src="movie.ogg" type="video/ogg" />
+                Your browser does not support the video tag.
+              </video>
+
+            <div href="" class="card"><h2>eventorganizer</h2></div>
+          </a>
+
+
+          <a href="{% url 'movie' %}" class="content">
+            <img src="https://img.freepik.com/free-vector/cinema-film-production-realistic-transparent-composition-with-isolated-image-clapper-with-empty-fields-vector-illustration_1284-66163.jpg?t=st=1719809290~exp=1719812890~hmac=99e2f490afc76a3036227345c983ecc3fcbbb0d34070481fc0997a490fe906b7&w=1380" alt="" />
+            <div class="card"><h2>movie</h2></div>
+          </a>
+
+
+          <a href="{% url 'education' %}" class="content">
+            <video width="320" height="240" autoplay loop muted>
+                <source src="https://videos.pexels.com/video-files/1422633/1422633-hd_1920_810_24fps.mp4" type="video/mp4" />
+                <source src="movie.ogg" type="video/ogg" />
+                Your browser does not support the video tag.
+              </video>
+            <div class="card"><h2>education</h2></div>
+          </a>
+
+          <a href="{% url 'socialmedia' %}" class="content">
+            <img src="https://as1.ftcdn.net/v2/jpg/03/21/82/98/1000_F_321829868_B35VEPKNVi8dAgwY4GoD9fKfJqiJD5rF.jpg" alt="" />
+            <div class="card"><h2>social media</h2></div>
+          </a>
+          <!-- <a href="{% url 'booking' %}" class="content">
+            <img src="" alt="" />
+            <div class="card"><h2>booking</h2></div>
+          </a>
+
+          <a href="{% url 'jprlar' %} " class="content">
+            <video width="320" height="240" autoplay loop muted>
+                <source src="https://videos.pexels.com/video-files/3997198/3997198-uhd_2732_1440_25fps.mp4 " type="video/mp4" />
+                <source src="movie.ogg" type="video/ogg" />
+                Your browser does not support the video tag.
+              </video>
+            <div class="card"><h2>beuty parlar</h2>
+          </div>
+          </a>
+          <a href="{% url 'bankingservices' %} " class="content">
+            <img src="" alt="" />
+            <div class="card"><h2>bank</h2></div>
+          </a>
+          <a href="{% url 'doctor' %} " class="content">
+            <video width="320" height="240" autoplay loop muted>
+                <source src="https://v.ftcdn.net/02/75/23/16/700_F_275231620_bV4Vim0vHYPZUaHKntqoqT0KPjy82BaU_ST.mp4" type="video/mp4" />
+                <source src="movie.ogg" type="video/ogg" />
+                Your browser does not support the video tag.
+              </video>
+            <div class="card"><h2>doctor</h2></div>
+          </a>
+          <a href=" {% url 'yourownshop' %}" class="content">
+            <img src="" alt="" />
+            <div class="card"><h2>my shop</h2></div>
+          </a>
+          <a href="{% url 'online_shoping_home' %} " class="content">
+            <img src="" alt="" />
+            <div class="card"> <h2>Shoptyfi</h2></div>
+          </a>
+          <a href="{% url 'matrimonial' %} " class="content">
+            <img src="" alt="" />
+            <div class="card"><h2>matrimonial</h2>
+          </div>
+          </a>
+          <a href="{% url 'news' %} " class="content">
+            <img src="" alt="" />
+            <div class="card"><h2>news</h2>
+          </div>
+          </a>
+
+          <a href="{% url 'realstate' %} " class="content">
+            <img src="" alt="" />
+            <div class="card"><h2>realstate</h2></div>
+            </a>
+          <a href="{% url 'rent' %} " class="content">
+            <img src="" alt="" />
+            <div class="card"><h2>rent everythig</h2></div>
+          </a>
+          <a href="{% url 'reviewhomepage' %} " class="content">
+            <img src="" alt="" />
+            <div class="card"><h2>review</h2></div>
+          </a>
+          <a href="{% url 'translator' %} " class="content">
+            <img src="" alt="" />
+            <div class="card"><h2>translator</h2></div>
+          </a> -->
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>
+<!-- 
+
+
+<video width="320" height="240" autoplay loop muted>
+                <source src=" " type="video/mp4" />
+                <source src="movie.ogg" type="video/ogg" />
+                Your browser does not support the video tag.
+              </video>
+
+
+
+
+
+
+-->

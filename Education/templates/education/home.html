@@ -30,8 +30,8 @@
                 <li><a href="{% url 'contect' %}">Contact</a></li>
                 <li><a href="{% url 'contect' %}">About</a></li>
             </ul>
-            <button id="open-menu-btn"><i class="uil uil-bars">a</i></button>
-            <button id="close-menu-btn"><i class="uil uil-multiply">b</i></button>
+            <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+            <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
         </div>
     </nav>
     <!-- end of nav bar -->
@@ -93,7 +93,7 @@
             <div class="course__info">
                 <h4>{{subject.subject_name}}</h4>
                 <p>{{subject.subject_description}}</p>
-                <a href="'#" class="btn btn-primary">Larn More</a>
+                <a href="'#" class="btn btn-primary">{{subject.subject_price}}</a>
             </div>
         </a>
         </article>

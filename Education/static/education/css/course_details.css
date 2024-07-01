@@ -1,0 +1,59 @@
+.container_course_detailas{
+    margin-top: 6rem;
+    color: rebeccapurple;
+    height: 100%;
+    background-color: aliceblue;
+    /* text-align: center; */
+    padding: 3rem 14rem;
+}
+.container_course_detailas .heading{
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: underline black;
+    font-style: sans-serif;
+}
+.container_course_detailas .coursebody .corsedepcreprion{
+    text-transform: capitalize;
+    font-style: normal;
+}
+.container_course_detailas .language{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.container_course_detailas .language p{
+    border: 1px solid black;
+    margin: 2px;
+    padding: 2px 9px;
+    background-color: khaki;
+}
+.container_course_detailas .action{
+    display: flex;
+    
+    justify-content: space-around;
+
+}
+.container_course_detailas h2 a{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    border: 2px solid;
+    color: black;
+    color: blueviolet;
+    background-color: aqua;
+}
+
+
+
+
+
+@media screen and (max-width:600px){
+    .container_course_detailas{
+        padding: 1rem 1rem;
+    }
+    .container_course_detailas h2 a{
+        margin-bottom: 10px;
+    }
+}

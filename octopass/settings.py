@@ -47,16 +47,18 @@ INSTALLED_APPS = [
     'online_bank',
     'online_shoping',
     'parlour',
+    'profilesetting',
     'rent',
-    'social',
     'translator',
     'review',
     'digitalBussiness',
     'Education',
     'eventOrganizer',
     'realState',
+    'social',
     'transport',
-    'userragistration',
+    
+    
     
 ]
 

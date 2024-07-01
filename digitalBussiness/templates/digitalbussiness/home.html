@@ -683,7 +683,7 @@
           </p>
 
           <form action="" class="contact-form" method="post">
-
+            {% csrf_token %}
             <div class="input-wrapper">
               <input type="text" name="name" aria-label="name" placeholder="Your name*" required class="input-field">
 

@@ -659,6 +659,7 @@
 
    }
    .left .sidebar{
+      margin-top: 8rem;
       background: rgba(219, 196, 196, 0.377);
    }
    .left .sidebar i{

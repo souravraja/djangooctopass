@@ -32,9 +32,11 @@ body{
     margin: 2rem;
     padding: 3rem;
 }
-.HOME__main__content{
+.hero .hedier{
   border: 0px solid;
+  border-bottom: #130f40;
   position: fixed;
+  height: 6rem;
   top: 0;
   left: 0;
   right: 0;
@@ -43,9 +45,65 @@ body{
   justify-content: space-between;
   padding: 2rem 9%;
   background: #fff;
+  z-index: 1000;
   box-shadow: var(--box-shadow);
+  /* display: flex; */
+  /* justify-content: space-around; */
 }
-.hero .contain ul{
+.hero .hedier a h1{
+  font-size: 5rem;
+}
+.hero .hedier .logo{
+  width: 5rem;
+  height: 5rem;
+
+  
+}
+.hero .hedier .logo img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 50%;
+
+}
+
+.hero .contain{
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.hero .contain .content{
+  width: 22rem;
+  height: 12rem;
+  border: 2px solid black;
+ 
+}
+.hero .contain .content img{
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+.hero .contain .content video{
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+.hero .contain .content a{
+  margin-bottom: 1px;
+}
+
+.hero .contain .content .card h2{
+  position: relative;
+  text-align: center;
+}
+
+
+/* .hero .contain ul{
   margin-top: 5rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -74,6 +132,7 @@ body{
     border-radius: 4px; 
     transition: background-color 0.3s ease; 
   } 
+
    
   .card:hover { 
     background-color: #0062cc; 
@@ -85,4 +144,16 @@ body{
       width: 100%; 
       margin-bottom: 10px; 
     } 
+  }  */
+  @media screen and (max-width: 767px) { 
+    .hero .contain{
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 12px;
+    }
+    .hero .contain .content{
+      width: 12rem;
+      height: 12rem;
+      border: 2px solid black;
+     
+    }
   } 

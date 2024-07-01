@@ -3,18 +3,20 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User,auth
 from django.contrib.auth.decorators import login_required
 from .models import Post
-from userragistration.models import Profile
+from profilesetting.models import Profile
 from .models import Post
 from itertools import chain
+
 # Create your views here.
 def home(request):
     user_object=User.objects.get(username=request.user.username)
+    # user_profile=Profile.objects.get(user=user_object)
     user_profile=Profile.objects.get(user=user_object)
     prfile=Profile.objects.get(user=request.user)
     print('user name is',user_object)
     print('user profile is',user_profile)
     print('user profile is',user_profile.bio)
-    # return HttpResponse('hello')s
+    # return HttpResponse('hello')
     post=Post.objects.order_by("?")
     context={
         'post':post,
@@ -23,6 +25,7 @@ def home(request):
         'profile':prfile
         }
     return render(request,'social/home.html',context)
+    
 
 def postdetails(request,post_slug):
     postd=Post.objects.get(id=post_slug)

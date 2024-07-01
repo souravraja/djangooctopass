@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Subject,Student,teacher,catagory
+from .models import Subject,Student,teacher,catagory,contectme
 # Create your views here.
 def home(request):
     subject=Subject.objects.order_by('?')[:6]
@@ -34,6 +34,14 @@ def contect(request):
     # Catagory=catagory.objects.all()
     # context={'cotagory':Catagory}
     if request.method=="POST":
+        firstname=request.POST['FirsName']
+        lastname=request.POST['LastName']
+        mob=request.POST['mob']
+        email=request.POST['Email']
+        message=request.POST['message']
+        print(firstname)
+        contectMe=contectme.objects.create(first_name=firstname,last_name=lastname,mob=mob,email=email, message=message)
+        contectMe.save()
         print(request.POST)
         
     return render(request,'education/contact.html',)

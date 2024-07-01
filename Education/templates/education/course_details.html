@@ -1,15 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    {{subject}}
-    {{subject.subject_description}}
-    {{subject.subject_language}}
-    {{subject.catagory}} 
-    {{subject.subject_price}} 
-</body>
-</html>
+
+{% extends "education/home.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'education/css/course_details.css' %}">
+{% endblock css %}
+{% block header %}
+
+{% endblock header %}
+
+{% block categories %}
+{% endblock categories %}
+{% block course %}
+    <div class="container_course_detailas">
+        <div class="heading">
+        <h1>{{subject}}</h1>
+        <sub>{{subject.catagory}}</sub>
+    </div>
+    <div class="coursebody">
+            <div class="corsedepcreprion">
+                <p>{{subject.subject_description}}</p>
+                
+            </div>
+    </div>
+    <div class="depcription">
+        
+    </div>
+    <div class="language">
+        <h2>subject avilable on </h2>
+         {% for area in subject.subject_language.all %}
+            <p>{{ area }}</p>
+        {%endfor%}                                                    
+    </div>
+    <div class="action">
+        <h3>course price:{{subject.subject_price}} </h3>
+        <h2>{{subject.subject_duration}}</h2>
+    </div>
+        <h2><a href="#">Admition</a></h2>
+{% endblock course %}
+{% block askQuestions %}
+{% endblock askQuestions %}
+{% block Testimonials %}
+{% endblock Testimonials %}
+{%  block footer%}
+{%  endblock footer%}
+
